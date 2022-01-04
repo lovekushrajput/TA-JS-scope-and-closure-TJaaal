@@ -30,31 +30,37 @@ function percentage(marks, total) {
   return (marks * 100) / total;
 }
 // Your answer
- percentage(5,10)
-
- //answer is 50
+// Function Declaration
 ```
 
 ```js
 let percentage = function percentage(marks, total) {
   return (marks * 100) / total;
 };
+// Your answer
+// Function Expression
 ```
 
 ```js
 let percentage = function (marks, total) {
   return (marks * 100) / total;
 };
+// Your answer
+// Function Expression
 ```
 
 ```js
 let percentage = (marks, total) => {
   return (marks * 100) / total;
 };
+// Your answer
+// Function Expression
 ```
 
 ```js
 let percentage = (marks, total) => (marks * 100) / total;
+// Your answer
+// Function Expression
 ```
 
 3. Why is a function definition an expression in JavaScript? Give one example of function expression.
@@ -69,8 +75,10 @@ let store =  function addition (num1,num2){
 
 4. Why is a function call an expression in JavaScript?
 ```js
-Because when we calling any function we have the function name or variable with the parethesis
-and that`s why function call an expression in javascript.
+// function expression is starting with expression that kind oof function is known as function expression
+//and expression is anything that results into a value so the function call an expression in javascript
+
+
 ```
 5. Write VALID and INVALID next to each example below with the reason.
 
@@ -129,6 +137,5 @@ filterAdd([1,2,3,4],add)
 ```
 10. Explain what is callback function. Why you can pass a function inside a function?
 A callback function is a function that is to be executed after the another function is execute.thta is known as callback function. 
-
-To make our code readable  we pass function inside function.
+because function is an expression.
  

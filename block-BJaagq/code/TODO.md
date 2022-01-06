@@ -118,3 +118,6 @@ console.log(one, two, three, four); // 5
 
 - Create the execution context diagram
 - What will be the value of 1, 2, 3, 4 and 5 or error if the code does not work
+```js
+Error because four in not defined and code is also not work after that
+```

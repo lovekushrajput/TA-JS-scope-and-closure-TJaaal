@@ -65,8 +65,8 @@ sayHi();
 4.
 
 ```js
-console.log(arr); // output Error
-console.log(username); // output Error
+console.log(arr); // output Undefined because we are using the value before assigning in it
+console.log(username); // output  Undefined because we are using the value before assigning in it
 var usename = 'Sam';
 var arr = [1, 2, 3, 4, 5, 6];
 

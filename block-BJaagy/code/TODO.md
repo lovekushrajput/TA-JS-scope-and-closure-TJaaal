@@ -41,7 +41,11 @@ Have `map` return a new array filled with values that are the result of the 'cal
 ```js
 // Your code goes here
 function map (arr,opFn){
-return  opFn(arr)
+ let finalArr = []
+ for(let elm of arr){
+   finalArr.push(opFn(elm))
+ }
+ return finalArr
 }
 
 // Test Your Code

@@ -1,7 +1,37 @@
 1. Create a function by your choice that accepts a callback function.
+ ```js
+ function add (a,cb){
+   return cb(a)
 
+ }
+
+ function multiply(num){
+   return num * num
+ }
+
+ add(2,multiply)
+ // 4
+ ```
 2. Create a function by you choice that returns a function reference.
+```js
+ let  number = [1,2,3,4,5,6,7,8]
+ let isOdd =  function (num){
+   return num % 2 !==0;
+ }
 
+ function filter (arr,cb){
+   let finalArr = []
+   for(let elm of arr){
+     if(cb(elm)){
+        finalArr.push(elm)
+     }
+   }
+   return finalArr
+ }
+
+ console.log(filter(number,isOdd));
+ //[1,3,5,7]
+```
 3. Create a higher order function called `map` that takes two inputs:
    - An array of numbers/string/boolean etc
    - A 'callback' function - a function that is applied to each element of the array (inside of the function 'map')
@@ -10,6 +40,9 @@ Have `map` return a new array filled with values that are the result of the 'cal
 
 ```js
 // Your code goes here
+function map (arr,opFn){
+return  opFn(arr)
+}
 
 // Test Your Code
 function multiplyByTwo(n) {
@@ -24,12 +57,17 @@ multiplyByTwo(2); //-> 4
 
 ```js
 // Your code goes here
+function forEach (arr,cb){
+let store = arr
+store(cb.join())
+}
 
 // Test Your Code
 let alphabet = '';
 let letters = ['a', 'b', 'c', 'd'];
 forEach(letters, function (char) {
   alphabet += char;
+  // alphabet = alphabet + char
 });
 console.log(alphabet); //prints 'abcd'
 ```
@@ -37,8 +75,14 @@ console.log(alphabet); //prints 'abcd'
 5. Create higher-order function called `filter` takes an array and a callback, and runs the callback on each element of the array if the return value of callback is `truthy` store in new array return the new array.
 
 ```js
-// Test Your Code
+// Your code goes here
+function filter (arr,cb){
+ let store = arr
+let st = store.filter(elm => cb(elm))
+ return st
+}
 
+// Test Your Code
 var numbers = [1, 3, 5, 4, 7, 89, 234, 20];
 let even = filter(numbers, function (n) {
   return n % 2 === 0;

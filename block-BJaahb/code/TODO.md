@@ -28,10 +28,10 @@ function getCounter() {
 
 let counter = getCounter();
 
-counter(); // output
-counter(); // output
-counter(); // output
-counter(); // output
+counter(); // output 1
+counter(); // output 2
+counter(); // output 3
+counter(); // output 4
 ```
 
 3. Create the execution context diagram
@@ -50,4 +50,5 @@ blue();
 tomato();
 
 // What will be the background color after the execution of last line
+// tomato
 ```

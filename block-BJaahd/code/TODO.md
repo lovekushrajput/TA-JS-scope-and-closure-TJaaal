@@ -4,7 +4,6 @@ Create the execution context diagram for following code. What will be the output
 function getCounter() {
   let privateCounter = 0;
   function changeBy(val) {
-    debugger;
     privateCounter += val;
   }
   return {
@@ -64,5 +63,5 @@ console.log(counter1.value()); //  2
 
 counter1.decrement();
 console.log(counter1.value()); //  1
-console.log(counter2.value()); //  undefined
+console.log(counter2.value()); //  undefined8U
 ```

@@ -157,13 +157,13 @@ arya.lower(); // 3500
 function nameFactory(firstName,lastName){
   return {
     getFullName: function (){
-      return  `${firstName} ${lastName}`
+      return `${firstName} ${lastName}`
     },
     setFirstName: function (first){ 
-      return   first = `${first} ${lastName}`
+       return  `${first} ${lastName}`
     },
     setLastName: function (last){
-      return last = `${firstName} ${last}`
+      return  `${firstName} ${last}`
     },
   };
 };

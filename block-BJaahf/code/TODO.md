@@ -10,15 +10,17 @@
 **You can use normal for loop for this function**
 
 ```js
-function loop() {
+function loop(initial,test,update,bodyfn) {
   // Your code goes here
-}
+ for(let i = initial;test(i);i=update(i)){
+    bodyfn(i)
+  }
+};
 
-loop(
-  3,
-  (n) => n > 0,
-  (n) => n - 1,
-  console.log
+loop(3,
+(n) => n > 0,
+(n) => n - 1,
+console.log
 );
 // → 3
 // → 2
@@ -30,7 +32,13 @@ loop(
 Here's how it works. The function has an "accumulator value" which starts as the `initialValue` and accumulates the output of each loop. The array is iterated over, passing the accumulator and the next array element as arguments to the `callback`. The callback's return value becomes the new accumulator value. The next loop executes with this new accumulator value. In the example above, the accumulator begins at 0. `add(0,4)` is called. The accumulator's value is now 4. Then `add(4, 1)` to make it 5. Finally `add(5, 3)` brings it to 8, which is returned.
 
 ```js
-function reduce(array, callback, initialValue) {}
+function reduce(array, callback, initialValue) {
+ let final =  array.reduce((acc,cv)=>{
+    return callback(acc,cv)
+  })
+
+  return final
+}
 
 // Test
 var nums = [4, 1, 3];
@@ -43,7 +51,25 @@ reduce(nums, add, 0); //-> 8
 3. Construct a function intersection that compares input arrays and returns a new array with elements found in all of the inputs.
 
 ```js
-function intersection(arrays) {}
+function  intersection(...arrays) {
+ let allArray=[]
+ arrays[0].reduce((acc,cv)=>{
+  return allArray.push(cv)
+ },0);
+
+ arrays[1].reduce((acc,cv)=>{
+  return allArray.push(cv)
+ },0);
+
+ arrays[2].reduce((acc,cv)=>{
+  return allArray.push(cv)
+ },0);
+ let duplicate1 = allArray.filter((elm,index)=> allArray.indexOf(elm) !==index)
+ 
+let finalCopy = duplicate1.filter((elm,index)=> duplicate1.indexOf(elm) !==index)
+
+return finalCopy
+}
 
 // Test
 console.log(
@@ -58,7 +84,20 @@ console.log(
 4. Construct a function `union` that compares input arrays and returns a new array that contains all elements. If there are duplicate elements, only add it once to the new array. Preserve the order of the elements starting from the first element of the first input array.
 
 ```js
-function union(arrays) {}
+function union(arrays, array2,array3) {
+ let allArray=[]
+ arrays.reduce((acc,cv)=>{
+  return allArray.push(cv)
+ },0);
+ array2.reduce((acc,cv)=>{
+  return allArray.push(cv)
+ },0);
+ array3.reduce((acc,cv)=>{
+  return allArray.push(cv)
+ },0);
+ let x =  allArray.filter((elm,index) => allArray.indexOf(elm) === index)
+ return x
+}
 
 // Test
 console.log(

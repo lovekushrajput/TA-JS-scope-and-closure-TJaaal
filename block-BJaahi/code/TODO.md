@@ -20,8 +20,8 @@ let message = sayHello(username);
 var nextMessage = sayHello('Test');
 ```
 
-<!-- Answer -->
-
+<!-- Answer --> 
+<!-- Arya, John -->
 ```js
 // Declaration Phase
 var username = undefined;
@@ -62,9 +62,25 @@ var nextMessage = sayHello('Test');
 ```
 
 <!-- Answer -->
-
+<!-- Error numbers is not defined-->
 ```js
-// Your code goes here
+//Declaration Phase
+var username = undefined;
+let number;
+
+function sayHello(name) {
+  return `Hello ${name}`;
+}
+
+let message;
+var nextMessage = undefined;
+
+// Execution Phase
+console.log(username, numbers)
+username = 'Arya';
+number = 21;
+message = sayHello(username)
+nextMessage = sayHello('Test')
 ```
 
 3.
@@ -83,9 +99,25 @@ var nextMessage = sayHello('Test');
 ```
 
 <!-- Answer -->
-
+<!-- Error username is not defined -->
 ```js
-// Your code goes here
+//  Declaration-Phase
+
+let username:
+let number;
+let sayHello;
+let message;
+var nextMessage = undefined;
+
+// Execution-Phase
+console.log(username, numbers);
+username = 'Arya';
+number = 21;
+sayHello = function (name) {
+  return `Hello ${name}`;
+};
+message = sayHello(username);
+nextMessage = sayHello('Test')
 ```
 
 4.
@@ -105,9 +137,27 @@ var nextMessage = sayHello('Test');
 ```
 
 <!-- Answer -->
-
+<!-- Erroe number is not defined -->
 ```js
-// Your code goes here
+//  Declaration Phase
+let username;
+let number;
+let message;
+let sayHello;
+var nextMessage = undefined;
+
+//Execution Pahse
+username = 'Arya';
+console.log(username, numbers);
+
+number= 21;
+message = sayHello(username);
+
+sayHello = function (name) {
+  return `Hello ${name}`;
+};
+
+nextMessage = sayHello('Test');
 ```
 
 5.
@@ -120,9 +170,18 @@ let age = 21;
 ```
 
 <!-- Answer -->
-
+<!-- undefined -->
+<!-- cannot access age before initialising -->
 ```js
-// Your code goes here
+//  Declaration Phase
+var name= undefined;
+let age;
+
+// Execution Phase
+console.log(name);
+console.log(age);
+name = "Lydia";
+age = 21;
 ```
 
 6.
@@ -139,9 +198,24 @@ sayHi();
 ```
 
 <!-- Answer -->
+<!-- undefined -->
+<!-- cannot access age before initialising -->
 
 ```js
-// Your code goes here
+function sayHi(name) {
+  // declration Phase
+  var name = undefined;
+  let age
+
+  //execution Phase
+  console.log(name);
+  console.log(age);
+  name = 'Lydia';
+  age = 21;
+}
+sayHi();
+
+
 ```
 
 7.
@@ -157,9 +231,25 @@ function sayHi(name) {
 ```
 
 <!-- Answer -->
+<!-- undefined -->
+<!-- Cannot access 'age' before initialization -->
 
 ```js
-// Your code goes here
+//  declaration phase
+function sayHi(name) {
+  // declaration phase
+  var name;
+  let age;
+
+  //execution
+  console.log(name);
+  console.log(age);
+  name = 'Lydia'
+  age = 21;
+}
+
+// Execution phase
+sayHi();
 ```
 
 8.
@@ -175,9 +265,24 @@ let sayHi = function sayHi(name) {
 ```
 
 <!-- Answer -->
-
+<!-- undefined -->
+<!-- Cannot access 'age' before initialization -->
 ```js
-// Your code goes here
+// declaration phase
+let sayHi;
+
+//Execution phase
+function sayHi(name) {
+//declration phase
+  var name
+  let age
+
+  //execution phase
+  console.log(name);
+  console.log(age);
+  name = 'Lydia';
+  age = 21;
+};
 ```
 
 9.
@@ -190,9 +295,18 @@ let num2 = 30;
 ```
 
 <!-- Answer -->
-
+<!-- Error num2 is not defiend -->
 ```js
-// Your code goes here
+//  Declaration phase
+let num1;
+var sum =undefined;
+let num2;
+
+// Execution phase
+num1 = 21;
+console.log(sum);
+sum=num1 + num2;
+num2= 30;
 ```
 
 10.
@@ -214,9 +328,26 @@ let sum = add(num1, num2, 4, 5, 6);
 ```
 
 <!-- Answer -->
-
+<!-- Sum has been already declared -->
 ```js
-// Your code goes here
+//  decration phase
+var num1 = undefined;
+let sum2;
+let add;
+num1=21;
+let num2;
+let sum;
+
+//execution phase
+sum2= addAgain(num1, num2, 4, 5, 6);
+ add = (a, b, c, d, e) => {
+  return a + b + c + d + e;
+};
+function addAgian(a, b) {
+  return a + b;
+}
+num2 = 200;
+sum = add(num1, num2, 4, 5, 6);
 ```
 
 11.
@@ -235,9 +366,26 @@ let add = (a, b) => {
 ```
 
 <!-- Answer -->
+<!-- add has been already declared -->
 
 ```js
-// Your code goes here
+//  Decration phase
+let sum
+let add;
+
+// execution phase
+function test(a) {
+  //decration phase
+  let num1
+
+  // execution phase
+  num = 21;
+  return add(a, num1);
+}
+sum = test(100);
+add = (a, b) => {
+  return a + b;
+};
 ```
 
 12.
@@ -256,7 +404,26 @@ function add(a, b) {
 ```
 
 <!-- Answer -->
+<!-- undefined -->
 
 ```js
-// Your code goes here
+//  Decraion phase
+let sum;
+
+
+// execution phase
+function test(a) {
+  //  Decraion phase
+  let num1
+
+  // execution phase
+  num1 = 21;
+  return add(a, num1);
+}
+
+sum = test(100);
+
+function add(a, b) {
+  return a + b;
+}
 ```

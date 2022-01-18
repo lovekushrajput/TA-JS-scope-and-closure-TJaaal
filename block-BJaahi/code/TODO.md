@@ -202,17 +202,20 @@ sayHi();
 <!-- cannot access age before initialising -->
 
 ```js
+//declration Phase
 function sayHi(name) {
-  // declration Phase
+  // function declration Phase
   var name = undefined;
   let age
 
-  //execution Phase
+  //function execution Phase
   console.log(name);
   console.log(age);
   name = 'Lydia';
   age = 21;
 }
+
+// Execution phase
 sayHi();
 
 
@@ -237,11 +240,11 @@ function sayHi(name) {
 ```js
 //  declaration phase
 function sayHi(name) {
-  // declaration phase
-  var name;
+  // function declaration phase
+  var name=undefined;
   let age;
 
-  //execution
+  // function execution phase
   console.log(name);
   console.log(age);
   name = 'Lydia'
@@ -266,18 +269,18 @@ let sayHi = function sayHi(name) {
 
 <!-- Answer -->
 <!-- undefined -->
-<!-- Cannot access 'age' before initialization -->
+<!-- sayHi is not defined-->
 ```js
 // declaration phase
 let sayHi;
 
 //Execution phase
 function sayHi(name) {
-//declration phase
+// function declration phase
   var name
   let age
 
-  //execution phase
+  // function execution phase
   console.log(name);
   console.log(age);
   name = 'Lydia';
@@ -334,7 +337,9 @@ let sum = add(num1, num2, 4, 5, 6);
 var num1 = undefined;
 let sum2;
 let add;
-num1=21;
+function addAgian(a, b) {
+  return a + b;
+}
 let num2;
 let sum;
 
@@ -343,9 +348,6 @@ sum2= addAgain(num1, num2, 4, 5, 6);
  add = (a, b, c, d, e) => {
   return a + b + c + d + e;
 };
-function addAgian(a, b) {
-  return a + b;
-}
 num2 = 200;
 sum = add(num1, num2, 4, 5, 6);
 ```
@@ -370,18 +372,14 @@ let add = (a, b) => {
 
 ```js
 //  Decration phase
-let sum
+function test(a) {
+  let num1 = 21;
+  return add(a, num1);
+}
+let sum;
 let add;
 
 // execution phase
-function test(a) {
-  //decration phase
-  let num1
-
-  // execution phase
-  num = 21;
-  return add(a, num1);
-}
 sum = test(100);
 add = (a, b) => {
   return a + b;
@@ -407,23 +405,17 @@ function add(a, b) {
 <!-- undefined -->
 
 ```js
-//  Decraion phase
+//   Declaration phase
+function test(a) {
+  let num1 = 21;
+  return add(a, num1);
+}
 let sum;
 
 
 // execution phase
-function test(a) {
-  //  Decraion phase
-  let num1
-
-  // execution phase
-  num1 = 21;
-  return add(a, num1);
-}
-
 sum = test(100);
-
-function add(a, b) {
+add = function add(a, b) {
   return a + b;
 }
 ```

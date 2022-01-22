@@ -54,7 +54,7 @@ function once(cb,...para) {
 return function(){
 count++
   if(count===1){
-return cb(para)
+return cb(...para)
 
   }
 }
@@ -78,7 +78,7 @@ function nTimes(cb, times, ...rest) {
       if(count>times){
 return undefined
   } else{
-return cb(rest)
+return cb(...rest)
 }
 }
 }
